@@ -1,161 +1,235 @@
-<!DOCTYPE html>
-<html lang="zh-Hans>">
+<!DOCTYPE html><html lang="zh-Hans" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>友链 | 君子不器</title><meta name="author" content="胡晃凤"><meta name="copyright" content="胡晃凤"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="黑夜给了我黑色的眼睛，我用它寻找光明">
+<meta property="og:type" content="website">
+<meta property="og:title" content="友链">
+<meta property="og:url" content="http://ahuang.ltd/link/index.html">
+<meta property="og:site_name" content="君子不器">
+<meta property="og:description" content="黑夜给了我黑色的眼睛，我用它寻找光明">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/05/28/lds98YVzFZWGwi6.jpg">
+<meta property="article:published_time" content="2021-01-28T06:13:51.000Z">
+<meta property="article:modified_time" content="2021-01-28T06:18:34.324Z">
+<meta property="article:author" content="胡晃凤">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/05/28/lds98YVzFZWGwi6.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://ahuang.ltd/link/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="yandex-verification" content="{&quot;theme_color&quot;:{&quot;enable&quot;:true,&quot;main&quot;:&quot;#49B1F5&quot;,&quot;paginator&quot;:&quot;#00c4b6&quot;,&quot;button_hover&quot;:&quot;#FF7242&quot;,&quot;text_selection&quot;:&quot;#00c4b6&quot;,&quot;link_color&quot;:&quot;#99a9bf&quot;,&quot;meta_color&quot;:&quot;#858585&quot;,&quot;hr_color&quot;:&quot;#A4D8FA&quot;,&quot;code_foreground&quot;:&quot;#F47466&quot;,&quot;code_background&quot;:&quot;rgba(27, 31, 35, .05)&quot;,&quot;toc_color&quot;:&quot;#00c4b6&quot;,&quot;blockquote_padding_color&quot;:&quot;#49b1f5&quot;,&quot;blockquote_background_color&quot;:&quot;#49b1f5&quot;}}"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: 胡晃凤","link":"Link: ","source":"Source: 君子不器","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: true
+};
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
 
-    
-    
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
 
-    
-    
-    <meta name="theme-color" content="#f9f9f9">
-    
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
 
-    
-    
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
 
-    
-    <title>
-        
-        友链
-        &nbsp;|&nbsp;
-        
-        君子不器
-    </title>
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: undefined,
+  isToc: false,
+  postUpdate: '2021-01-28 14:18:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-    
-    
-    <link type="image/x-icon" rel="shortcut icon"
-          href="/favicon.png">
-    
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}const fontSizeVal = saveToLocal.get('global-font-size')
+if (fontSizeVal !== undefined) {
+  document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+}})()</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://i.loli.net/2021/03/18/nxeKUubRN95fkXM.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">18</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-index-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">君子不器</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">友链</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="flink" id="article-container"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://i.loli.net/2021/03/18/nxeKUubRN95fkXM.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">胡晃凤</div><div class="author-info__description">黑夜给了我黑色的眼睛，我用它寻找光明</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">18</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">鱼跃此时海，花开彼岸天</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/06/29/PyhtonOss/" title="Pyhton&amp;aliyunOss"><img src="https://i.loli.net/2021/04/26/zdhHr3KLJVaARw9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Pyhton&amp;aliyunOss"/></a><div class="content"><a class="title" href="/2021/06/29/PyhtonOss/" title="Pyhton&amp;aliyunOss">Pyhton&amp;aliyunOss</a><time datetime="2021-06-29T06:44:17.000Z" title="Created 2021-06-29 14:44:17">2021-06-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/05/24/TCP%E7%8A%B6%E6%80%81%E6%B5%81%E8%BD%AC/" title="TCP状态流转"><img src="https://i.loli.net/2021/07/28/fDYj8Ardbg34xSu.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TCP状态流转"/></a><div class="content"><a class="title" href="/2021/05/24/TCP%E7%8A%B6%E6%80%81%E6%B5%81%E8%BD%AC/" title="TCP状态流转">TCP状态流转</a><time datetime="2021-05-24T07:38:11.000Z" title="Created 2021-05-24 15:38:11">2021-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/05/19/Maxwell/" title="Maxwell"><img src="https://i.loli.net/2021/03/26/ORlX1KFImTaJp4V.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Maxwell"/></a><div class="content"><a class="title" href="/2021/05/19/Maxwell/" title="Maxwell">Maxwell</a><time datetime="2021-05-19T06:34:38.000Z" title="Created 2021-05-19 14:34:38">2021-05-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/05/14/Hadoopcluster/" title="Hadoopcluster"><img src="https://i.loli.net/2021/03/26/eKUlVJFwaY8tsQj.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hadoopcluster"/></a><div class="content"><a class="title" href="/2021/05/14/Hadoopcluster/" title="Hadoopcluster">Hadoopcluster</a><time datetime="2021-05-14T08:02:44.000Z" title="Created 2021-05-14 16:02:44">2021-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/05/08/mysql-binlog/" title="mysql-binlog"><img src="https://i.loli.net/2021/07/28/fDYj8Ardbg34xSu.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mysql-binlog"/></a><div class="content"><a class="title" href="/2021/05/08/mysql-binlog/" title="mysql-binlog">mysql-binlog</a><time datetime="2021-05-08T08:09:30.000Z" title="Created 2021-05-08 16:09:30">2021-05-08</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/hadoop-bigdata/" style="font-size: 1.1em; color: rgb(15, 58, 20)">hadoop bigdata</a><a href="/tags/JVM/" style="font-size: 1.1em; color: rgb(119, 68, 89)">JVM</a><a href="/tags/SLB-Nginx-Lvs/" style="font-size: 1.1em; color: rgb(107, 124, 184)">SLB Nginx Lvs</a><a href="/tags/binlog/" style="font-size: 1.1em; color: rgb(35, 128, 75)">binlog</a><a href="/tags/linux-shell-grep-awk-sed/" style="font-size: 1.1em; color: rgb(60, 0, 178)">linux shell grep awk sed</a><a href="/tags/Pyhton/" style="font-size: 1.1em; color: rgb(155, 109, 186)">Pyhton</a><a href="/tags/Spring-java/" style="font-size: 1.1em; color: rgb(71, 164, 123)">Spring java</a><a href="/tags/TCP/" style="font-size: 1.1em; color: rgb(27, 99, 87)">TCP</a><a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%8D%8F%E8%B0%83/" style="font-size: 1.1em; color: rgb(170, 141, 141)">--消息队列，服务协调</a><a href="/tags/ansible/" style="font-size: 1.1em; color: rgb(70, 41, 23)">--ansible</a><a href="/tags/linux/" style="font-size: 1.1em; color: rgb(8, 66, 196)">linux</a><a href="/tags/kuvernetes%EF%BC%8Cdocker/" style="font-size: 1.1em; color: rgb(10, 62, 169)">--kuvernetes，docker</a><a href="/tags/mongodb/" style="font-size: 1.1em; color: rgb(157, 188, 70)">mongodb</a><a href="/tags/mongodb/" style="font-size: 1.1em; color: rgb(157, 92, 7)">--mongodb</a><a href="/tags/mysql/" style="font-size: 1.1em; color: rgb(20, 82, 120)">mysql</a><a href="/tags/mariadb-mysql/" style="font-size: 1.1em; color: rgb(118, 196, 73)">--mariadb,mysql</a><a href="/tags/mvc/" style="font-size: 1.1em; color: rgb(163, 86, 196)">mvc</a><a href="/tags/%E5%B0%86%E5%A4%9C/" style="font-size: 1.1em; color: rgb(69, 151, 2)">--将夜</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">June 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">May 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">April 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">March 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">February 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">January 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">December 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">June 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives/">
+              <span>More</span><i class="fas fa-angle-right"  ></i></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">21</div></div><div class="webinfo-item"><div class="item-name">Run time :</div><div class="item-count" id="runtimeshow" data-publishDate="2017-10-11T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-07-29T02:33:25.017Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 胡晃凤</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">看到这里的人呐，都是天才！</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="font-plus" type="button" title="Increase font size"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="Decrease font size"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="Toggle Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
 
-    
-    
-    <link rel="author" content="/humans.txt">
-    
-
-    
-     
-<link rel="stylesheet" href="/css/style.css">
-
-
-<meta name="generator" content="Hexo 5.3.0"></head>
-
-
-<body>
-
-<div class="body-wrapper">
-    <header>
-    <div class="container">
-
-        
-        <div>
-            <h1 class="logo">
-                <a href="/">
-                    君子不器
-                </a>
-            </h1>
-        </div>
-
-        
-        <nav class="navbar">
-            <ul class="navbar-menus">
-                
-                <li class="navbar-menus-item">
-                    <a href="/">
-                        
-                        Home
-                    </a>
-                </li>
-                
-                <li class="navbar-menus-item">
-                    <a href="/archives">
-                        
-                        archives
-                    </a>
-                </li>
-                
-                <li class="navbar-menus-item">
-                    <a href="/tags">
-                        
-                        Tags
-                    </a>
-                </li>
-                
-                <li class="navbar-menus-item">
-                    <a href="/about">
-                        
-                        About
-                    </a>
-                </li>
-                
-                <li class="navbar-menus-item">
-                    <a href="/categories">
-                        
-                        Categories
-                    </a>
-                </li>
-                
-                <li class="navbar-menus-item">
-                    <a href="/link">
-                        
-                        link
-                    </a>
-                </li>
-                
-                <li class="navbar-menus-item">
-                    <a href="/search">
-                        
-                        search
-                    </a>
-                </li>
-                
-            </ul>
-        </nav>
-
-    </div>
-</header>
-
-
-    <div class="main">
-    <div class="container">
-
-        <div class="page">
-
-  <h1 class="menu-page-title">
-    友链
-  </h1>
-
-  <div class="content">
-    
-  </div>
-
-</div>
-
-
-    </div>
-</div>
-
-</div>
-
-<footer>
-    <div class="container text-center">
-
-        
-        <p class="copyright">
-            <span>&copy; 2015 - 2017</span>
-            <span> / </span>
-            <span><a href="http://varzy.me" target="_blank">Aiden Zhao</a></span>
-        </p>
-
-    </div>
-</footer>
-
-
-</body>
-
-</html>
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    loader: {
+      source: {
+        '[tex]/amsCd': '[tex]/amscd'
+      }
+    },
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        addClass: [200,() => {
+          document.querySelectorAll('mjx-container:not([display=\'true\']').forEach( node => {
+            const target = node.parentNode
+            if (!target.classList.contains('has-jax')) {
+              target.classList.add('mathjax-overflow')
+            }
+          })
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', '', 'katex-wrap')
+  })
+})()</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script></div></body></html>
