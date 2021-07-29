@@ -9,9 +9,6 @@
 
     
     
-    <meta name="google-site-verification"
-          content="c66gcm0iMw487a2YC6w7cFbrhhe_Mh_vVNC6Pt3Dak8">
-    
 
     
     
@@ -76,9 +73,9 @@
                 </li>
                 
                 <li class="navbar-menus-item">
-                    <a href="/categories">
+                    <a href="/archives">
                         
-                        Categories
+                        archives
                     </a>
                 </li>
                 
@@ -93,6 +90,27 @@
                     <a href="/about">
                         
                         About
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/categories">
+                        
+                        Categories
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/link">
+                        
+                        link
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/search">
+                        
+                        search
                     </a>
                 </li>
                 
@@ -124,6 +142,8 @@
 
         
         
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-text"></span></a></li></ol>
+        
 
         <h4 id=""><a href="#" class="headerlink" title=""></a></h4><p>-Xms 是指程序启动时初始内存大小（此值可以设置成与-Xmx相同，以避免每次GC完成后 JVM 内存重新分配）默认为本机内存4/1<br>-Xmx 指程序运行时最大可用内存大小，程序运行中内存大于这个值会 OutOfMemory, 默认为本机内存64/1<br>command=java 指定为java<br>-javaagent：/home/meisapp/pinpoint-agent-2.0.2/pinpoint-bootstrap-2.0.2.jar 指定探针pippoint<br>-Dpinpoint.applicationName=meisooApiService  指定服务名<br>-Dpinpoint.agentId=fc69d773e1616548  探针ID<br>-XX:+HeapDumpOnOutOfMemoryError 表示当JVM发生OOM时，自动生成DUMP文件<br>–spring.profiles.active=yun 指定启动环境参数，spring boot允许你通过命名约定按照一定的格式(application-{profile}.properties)来定义多个配置文件，然后通过在application.properyies通过spring.profiles.active来具体激活一个或者多个配置文件，如果没有没有指定任何profile的配置文件的话，spring boot默认会启动application-default.properties<br>-Xloggc:/home/meisapp/services/meisooApiService/2.0.0/gc.log 指定gc.log</p>
 
@@ -131,7 +151,11 @@
 
     
     
+    
+    
 
+    
+    
     
     
 

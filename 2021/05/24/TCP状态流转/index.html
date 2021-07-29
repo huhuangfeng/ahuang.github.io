@@ -9,9 +9,6 @@
 
     
     
-    <meta name="google-site-verification"
-          content="c66gcm0iMw487a2YC6w7cFbrhhe_Mh_vVNC6Pt3Dak8">
-    
 
     
     
@@ -76,9 +73,9 @@
                 </li>
                 
                 <li class="navbar-menus-item">
-                    <a href="/categories">
+                    <a href="/archives">
                         
-                        Categories
+                        archives
                     </a>
                 </li>
                 
@@ -93,6 +90,27 @@
                     <a href="/about">
                         
                         About
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/categories">
+                        
+                        Categories
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/link">
+                        
+                        link
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/search">
+                        
+                        search
                     </a>
                 </li>
                 
@@ -124,6 +142,8 @@
 
         
         
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Antecedents-feed"><span class="toc-text">Antecedents feed</span></a></li></ol>
+        
 
         <h4 id="Antecedents-feed"><a href="#Antecedents-feed" class="headerlink" title="Antecedents feed"></a>Antecedents feed</h4><p>起初Java springboot 中的网关服务变得有些卡，通过pinpoint监控以及elk日志和阿里云的slb日志查明是有人恶意频繁访问某一接口，而后进行处理。然而再排查过程中查看了当前ECS的TCP连接数，觉得还是有必要tcp各个状态的含义以及状态流转。</p>
 <p>查看一下当前ECS的Tcp连接信息<br>netstat -n | awk ‘/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}’<br><img src="https://i.loli.net/2021/07/28/Inb5HWVDcUMhfJA.png" alt="_W_6JZAH16_66A___R7TW2B.png"></p>
@@ -132,7 +152,11 @@
 
     
     
+    
+    
 
+    
+    
     
     
 

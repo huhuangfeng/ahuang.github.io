@@ -9,9 +9,6 @@
 
     
     
-    <meta name="google-site-verification"
-          content="c66gcm0iMw487a2YC6w7cFbrhhe_Mh_vVNC6Pt3Dak8">
-    
 
     
     
@@ -76,9 +73,9 @@
                 </li>
                 
                 <li class="navbar-menus-item">
-                    <a href="/categories">
+                    <a href="/archives">
                         
-                        Categories
+                        archives
                     </a>
                 </li>
                 
@@ -93,6 +90,27 @@
                     <a href="/about">
                         
                         About
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/categories">
+                        
+                        Categories
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/link">
+                        
+                        link
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/search">
+                        
+                        search
                     </a>
                 </li>
                 
@@ -124,6 +142,8 @@
 
         
         
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#binlog-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">binlog-常用命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%BF%E7%82%B9%E7%82%B9%E5%B0%8F%E7%BB%86%E8%8A%82"><span class="toc-text">亿点点小细节</span></a></li></ol>
+        
 
         <h4 id="binlog-常用命令"><a href="#binlog-常用命令" class="headerlink" title="binlog-常用命令"></a>binlog-常用命令</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"># 是否启用binlog日志</span><br><span class="line">show variables like &#x27;log_bin&#x27;;</span><br><span class="line"></span><br><span class="line"># 查看serverid信息</span><br><span class="line">show variables like &#x27;server_id&#x27;;</span><br><span class="line"></span><br><span class="line"># 查看详细的日志配置信息</span><br><span class="line">show global variables like &#x27;%log%&#x27;;</span><br><span class="line"></span><br><span class="line"># mysql数据存储目录</span><br><span class="line">show variables like &#x27;%dir%&#x27;;</span><br><span class="line"></span><br><span class="line"># 查看binlog的目录</span><br><span class="line">show global variables like &quot;%log_bin%&quot;;</span><br><span class="line"></span><br><span class="line"># 查看当前服务器使用的biglog文件及大小</span><br><span class="line">show binary logs;</span><br><span class="line"></span><br><span class="line"># 查看主服务器使用的biglog文件及大小</span><br><span class="line"></span><br><span class="line"># 查看最新一个binlog日志文件名称和Position</span><br><span class="line">show master status;</span><br><span class="line"></span><br><span class="line"># 事件查询命令</span><br><span class="line"># IN &#x27;log_name&#x27; ：指定要查询的binlog文件名(不指定就是第一个binlog文件)</span><br><span class="line"># FROM pos ：指定从哪个pos起始点开始查起(不指定就是从整个文件首个pos点开始算)</span><br><span class="line"># LIMIT [offset,] ：偏移量(不指定就是0)</span><br><span class="line"># row_count ：查询总条数(不指定就是所有行)</span><br><span class="line">show binlog events [IN &#x27;log_name&#x27;] [FROM pos] [LIMIT [offset,] row_count];</span><br><span class="line"></span><br><span class="line"># 查看 binlog 内容</span><br><span class="line">show binlog events;</span><br><span class="line"></span><br><span class="line"># 查看具体一个binlog文件的内容 （in 后面为binlog的文件名）</span><br><span class="line">show binlog events in &#x27;master.000003&#x27;;</span><br><span class="line"></span><br><span class="line"># 设置binlog文件保存事件，过期删除，单位天</span><br><span class="line">set global expire_log_days=3; </span><br><span class="line"></span><br><span class="line"># 删除当前的binlog文件</span><br><span class="line">reset master; </span><br><span class="line"></span><br><span class="line"># 删除slave的中继日志</span><br><span class="line">reset slave;</span><br><span class="line"></span><br><span class="line"># 删除指定日期前的日志索引中binlog日志文件</span><br><span class="line">purge master logs before &#x27;2019-03-09 14:00:00&#x27;;</span><br><span class="line"></span><br><span class="line"># 删除指定日志文件</span><br><span class="line">purge master logs to &#x27;master.000003&#x27;;</span><br></pre></td></tr></table></figure>
 <h4 id="亿点点小细节"><a href="#亿点点小细节" class="headerlink" title="亿点点小细节"></a>亿点点小细节</h4><p>MySQL建库的过程中发现了一个问题，无论怎么创建库，创建出来的库名都是小写的，下列参数有关于mysql Global 的大小写敏感参数<br>lower_case_file_system off/on<br>lower_case_table_names 0/1/2  </p>
@@ -133,7 +153,11 @@
 
     
     
+    
+    
 
+    
+    
     
     
 

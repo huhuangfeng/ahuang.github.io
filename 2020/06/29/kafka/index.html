@@ -9,9 +9,6 @@
 
     
     
-    <meta name="google-site-verification"
-          content="c66gcm0iMw487a2YC6w7cFbrhhe_Mh_vVNC6Pt3Dak8">
-    
 
     
     
@@ -76,9 +73,9 @@
                 </li>
                 
                 <li class="navbar-menus-item">
-                    <a href="/categories">
+                    <a href="/archives">
                         
-                        Categories
+                        archives
                     </a>
                 </li>
                 
@@ -93,6 +90,27 @@
                     <a href="/about">
                         
                         About
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/categories">
+                        
+                        Categories
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/link">
+                        
+                        link
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/search">
+                        
+                        search
                     </a>
                 </li>
                 
@@ -124,6 +142,8 @@
 
         
         
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#kafka-%E9%AB%98%E5%90%9E%E5%90%90%E9%87%8F%E7%9A%84%E5%88%86%E5%B8%83%E5%BC%8F%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%B6%88%E6%81%AF%E7%B3%BB%E7%BB%9F"><span class="toc-text">kafka-高吞吐量的分布式发布订阅消息系统 </span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#step1-%E5%AE%89%E8%A3%85zookeeper%E9%9B%86%E7%BE%A4"><span class="toc-text">step1.安装zookeeper集群</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#step2-%E5%AE%89%E8%A3%85kafka%E9%9B%86%E7%BE%A4"><span class="toc-text">step2.安装kafka集群</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#step3-%E5%90%AF%E5%8A%A8%E6%B5%8B%E8%AF%95"><span class="toc-text">step3.启动测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ps-python%E6%8B%93%E5%B1%95"><span class="toc-text">ps.python拓展</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#a-little-problem-%E2%80%A6%E2%80%A6"><span class="toc-text">a little problem ……</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#one%EF%BC%9A-consumer-offsets-%E6%96%87%E4%BB%B6%E8%BF%87%E5%A4%A7%E6%8A%8A%E7%A3%81%E7%9B%98%E5%8D%A0%E6%BB%A1"><span class="toc-text">one： __consumer_offsets 文件过大把磁盘占满</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PS%EF%BC%88%E9%9B%86%E7%BE%A4%E6%9C%8D%E5%8A%A1%E9%80%9A%E8%BF%87%E6%AD%A4%E9%85%8D%E7%BD%AE%E4%BF%AE%E6%94%B9%E4%B9%9F%E8%83%BD%E7%94%9F%E6%95%88%EF%BC%8C%E8%8B%A5%E6%98%AF%E6%83%B3%E8%A6%81%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%BE%BE%E5%88%B0%E6%95%88%E6%9E%9C%E5%88%99%E9%9C%80%E8%A6%81%E9%9B%86%E7%BE%A4%E4%B8%AD%E6%AF%8F%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E9%83%BD%E4%BF%AE%E6%94%B9server-properties%E6%96%87%E4%BB%B6%EF%BC%89"><span class="toc-text">PS（集群服务通过此配置修改也能生效，若是想要通过修改配置文件达到效果则需要集群中每一台机器都修改server.properties文件）</span></a></li></ol>
+        
 
         <h4 id="kafka-高吞吐量的分布式发布订阅消息系统"><a href="#kafka-高吞吐量的分布式发布订阅消息系统" class="headerlink" title="kafka-高吞吐量的分布式发布订阅消息系统 "></a>kafka-高吞吐量的分布式发布订阅消息系统 <a id="more"></a></h4><h4 id="step1-安装zookeeper集群"><a href="#step1-安装zookeeper集群" class="headerlink" title="step1.安装zookeeper集群"></a>step1.安装zookeeper集群</h4><p>可看之前文章，此处略……</p>
 <h4 id="step2-安装kafka集群"><a href="#step2-安装kafka集群" class="headerlink" title="step2.安装kafka集群"></a>step2.安装kafka集群</h4><p> 所有节点：</p>
@@ -153,7 +173,11 @@
 
     
     
+    
+    
 
+    
+    
     
     
 

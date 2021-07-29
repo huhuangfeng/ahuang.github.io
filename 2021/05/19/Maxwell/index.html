@@ -9,9 +9,6 @@
 
     
     
-    <meta name="google-site-verification"
-          content="c66gcm0iMw487a2YC6w7cFbrhhe_Mh_vVNC6Pt3Dak8">
-    
 
     
     
@@ -76,9 +73,9 @@
                 </li>
                 
                 <li class="navbar-menus-item">
-                    <a href="/categories">
+                    <a href="/archives">
                         
-                        Categories
+                        archives
                     </a>
                 </li>
                 
@@ -93,6 +90,27 @@
                     <a href="/about">
                         
                         About
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/categories">
+                        
+                        Categories
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/link">
+                        
+                        link
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/search">
+                        
+                        search
                     </a>
                 </li>
                 
@@ -124,6 +142,8 @@
 
         
         
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Maxwell-mysql-binlog-%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7"><span class="toc-text">Maxwell-mysql binlog 分析工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#step1-%E5%AE%89%E8%A3%85%E7%89%88%E6%9C%AC"><span class="toc-text">step1.安装版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#step2-%E5%AE%89%E8%A3%85maxwell"><span class="toc-text">step2.安装maxwell</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8"><span class="toc-text">启动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text">测试</span></a></li></ol>
+        
 
         <h4 id="Maxwell-mysql-binlog-分析工具"><a href="#Maxwell-mysql-binlog-分析工具" class="headerlink" title="Maxwell-mysql binlog 分析工具"></a>Maxwell-mysql binlog 分析工具</h4><h4 id="step1-安装版本"><a href="#step1-安装版本" class="headerlink" title="step1.安装版本"></a>step1.安装版本</h4><p>jdk-8u231-linux-x64.tar.gz 略<br>kafka_2.12-1.0.0.tgz<br>mariadb-10.1.8.tar.gz<br>maxwell-1.25.0.tar.gz</p>
 <h4 id="step2-安装maxwell"><a href="#step2-安装maxwell" class="headerlink" title="step2.安装maxwell"></a>step2.安装maxwell</h4><p>tar -zxvf maxwell-1.25.0.tar.gz -C /home<br>cat config.properties |grep -v ‘#’ |grep -v ‘^$’</p>
@@ -137,7 +157,11 @@
 
     
     
+    
+    
 
+    
+    
     
     
 

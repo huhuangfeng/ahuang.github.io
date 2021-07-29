@@ -9,9 +9,6 @@
 
     
     
-    <meta name="google-site-verification"
-          content="c66gcm0iMw487a2YC6w7cFbrhhe_Mh_vVNC6Pt3Dak8">
-    
 
     
     
@@ -76,9 +73,9 @@
                 </li>
                 
                 <li class="navbar-menus-item">
-                    <a href="/categories">
+                    <a href="/archives">
                         
-                        Categories
+                        archives
                     </a>
                 </li>
                 
@@ -93,6 +90,27 @@
                     <a href="/about">
                         
                         About
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/categories">
+                        
+                        Categories
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/link">
+                        
+                        link
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/search">
+                        
+                        search
                     </a>
                 </li>
                 
@@ -124,6 +142,8 @@
 
         
         
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#MongoDb-Replica-Set-%E5%89%AF%E6%9C%AC%E9%9B%86"><span class="toc-text">MongoDb Replica Set 副本集 </span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-%EF%BC%88%E5%9D%87%EF%BC%89"><span class="toc-text">安装 （均）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-%EF%BC%88%E5%9D%87%EF%BC%89"><span class="toc-text">修改配置文件 （均）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E9%9B%86%E7%BE%A4"><span class="toc-text">启动集群</span></a></li></ol>
+        
 
         <h4 id="MongoDb-Replica-Set-副本集"><a href="#MongoDb-Replica-Set-副本集" class="headerlink" title="MongoDb Replica Set 副本集 "></a>MongoDb Replica Set 副本集 <a id="more"></a></h4><h4 id="安装-（均）"><a href="#安装-（均）" class="headerlink" title="安装 （均）"></a>安装 （均）</h4><p>解压安装包，修改文件名，创建conf，data，log等文件夹<br>tar -zxvf tar -zxvf mongodb-linux-x86_64-rhel70-4.0.2.tgz  -C /opt/<br>mkdir mongodb-master{conf,data,log,pid}</p>
 <h4 id="修改配置文件-（均）"><a href="#修改配置文件-（均）" class="headerlink" title="修改配置文件 （均）"></a>修改配置文件 （均）</h4><p>主节点<br>vim mongodb-master/conf/mongodb.conf </p>
@@ -142,7 +162,11 @@
 
     
     
+    
+    
 
+    
+    
     
     
 

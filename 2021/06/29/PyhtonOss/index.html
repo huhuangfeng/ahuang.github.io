@@ -9,9 +9,6 @@
 
     
     
-    <meta name="google-site-verification"
-          content="c66gcm0iMw487a2YC6w7cFbrhhe_Mh_vVNC6Pt3Dak8">
-    
 
     
     
@@ -76,9 +73,9 @@
                 </li>
                 
                 <li class="navbar-menus-item">
-                    <a href="/categories">
+                    <a href="/archives">
                         
-                        Categories
+                        archives
                     </a>
                 </li>
                 
@@ -93,6 +90,27 @@
                     <a href="/about">
                         
                         About
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/categories">
+                        
+                        Categories
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/link">
+                        
+                        link
+                    </a>
+                </li>
+                
+                <li class="navbar-menus-item">
+                    <a href="/search">
+                        
+                        search
                     </a>
                 </li>
                 
@@ -124,6 +142,8 @@
 
         
         
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#The-preface"><span class="toc-text">The preface</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Code"><span class="toc-text">Code</span></a></li></ol>
+        
 
         <h4 id="The-preface"><a href="#The-preface" class="headerlink" title="The preface"></a>The preface</h4><p>研发人员已使用Java将上传OSS bucket的代码封装。而为了安全考虑我们的Bucket统一设置为私有权限，此时，若使用代码直接上传文件，默认会继承Bucket的权限，而需求又是不想让文件权限为私有，好在Oss是支持代码在上传时即指定文件权限的,为防止打脸，亲身测一下先.</p>
 <h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> oss2</span><br><span class="line"></span><br><span class="line"><span class="comment">##阿里云账号AccessKey</span></span><br><span class="line">auth = oss2.Auth(<span class="string">&#x27;yourAccessKey&#x27;</span>, <span class="string">&#x27;yourAccessKeySecret&#x27;</span>)</span><br><span class="line"></span><br><span class="line">endpoint = <span class="string">&#x27;yourendpoint&#x27;</span></span><br><span class="line">bucket = oss2.Bucket(auth, endpoint, <span class="string">&#x27;yourBucketname&#x27;</span>) </span><br><span class="line"></span><br><span class="line"><span class="comment">##指定上传文件权限</span></span><br><span class="line">headers = <span class="built_in">dict</span>()</span><br><span class="line">headers[<span class="string">&quot;x-oss-storage-class&quot;</span>] = <span class="string">&quot;Standard&quot;</span></span><br><span class="line">headers[<span class="string">&quot;x-oss-object-acl&quot;</span>] = oss2.OBJECT_ACL_PUBLIC_READ</span><br><span class="line"></span><br><span class="line"><span class="comment">#以二进制的方式打开文件</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;E:\\****.jpg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> fileobj:</span><br><span class="line">    <span class="comment"># Seek方法用于指定从第n个字节位置开始读写。上传时会从您指定的第*个字节位置开始上传，直到文件结束</span></span><br><span class="line">    fileobj.seek(<span class="number">0</span>, os.SEEK_SET)</span><br><span class="line">    <span class="comment"># Tell方法用于返回当前位置</span></span><br><span class="line">    current = fileobj.tell()</span><br><span class="line">    <span class="comment"># 填写Object完整路径。Object完整路径中不能包含Bucket名称</span></span><br><span class="line">    bucket.put_object(<span class="string">&#x27;****&#x27;</span>, fileobj, headers=headers)</span><br></pre></td></tr></table></figure>
@@ -134,7 +154,11 @@
 
     
     
+    
+    
 
+    
+    
     
     
 

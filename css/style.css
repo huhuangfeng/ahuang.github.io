@@ -743,9 +743,3 @@ footer {
     color: #828282; }
   .prev-next .wrapper a:hover {
     color: #b7472a; }
-
-.page ul, .page ol {
-  padding-left: 3.2rem; }
-  .page ul li, .page ol li {
-    list-style: disc;
-    line-height: 2.2rem; }
